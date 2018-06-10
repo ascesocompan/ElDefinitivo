@@ -13,7 +13,9 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+/**
+ * Created by Antony on 23/03/2018.
+ */
 public class REGISTROUSUARIO extends AppCompatActivity {
 EditText Et_nom,Et_pass,Et_bol;
     private ProgressBar progresbar2;
@@ -57,6 +59,7 @@ EditText Et_nom,Et_pass,Et_bol;
                             Toast.makeText(getApplicationContext(), "Registrado con exito", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(REGISTROUSUARIO.this, LogginActivity.class);
                             REGISTROUSUARIO.this.startActivity(intent);
+                            finish();
                         } else {
                             progresbar2.setVisibility(View.INVISIBLE);
                             Toast.makeText(getApplicationContext(), "Ocurrio un error en el registro", Toast.LENGTH_LONG).show();

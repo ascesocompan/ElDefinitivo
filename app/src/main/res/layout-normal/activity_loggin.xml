@@ -48,26 +48,26 @@
         android:id="@+id/Usuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/Contraseña"
         android:layout_alignLeft="@+id/Contraseña"
         android:layout_alignStart="@+id/Contraseña"
-        android:layout_marginBottom="32dp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="98dp"
         android:ems="10"
+        android:hint="Introduzca su usuario"
         android:inputType="textPersonName"
-        android:visibility="invisible"
-        android:hint="Introduzca su usuario"/>
+        android:visibility="invisible" />
 
     <EditText
         android:id="@+id/Contraseña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageIngresar"
+        android:layout_below="@+id/progressBar"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
+        android:hint="Introduzca su contraseña"
         android:inputType="textPassword"
-        android:visibility="invisible"
-        android:hint="Introduzca su contraseña"/>
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/CR"
@@ -86,5 +86,14 @@
         android:layout_alignBottom="@+id/Usuario"
         android:layout_centerHorizontal="true"
         android:visibility="invisible" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Contraseña"
+        android:layout_centerHorizontal="true"
+        android:text="Mantener sesion abierta"
+        android:visibility="invisible"/>
 
 </RelativeLayout>

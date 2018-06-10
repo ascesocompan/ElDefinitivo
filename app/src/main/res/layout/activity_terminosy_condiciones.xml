@@ -6,36 +6,55 @@
     android:layout_height="match_parent"
     tools:context="com.cecyred.ww.cecyred.TerminosyCondiciones">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="323dp"
-        android:layout_height="431dp"
-
-        android:layout_marginEnd="34dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="16dp"
-        android:scrollbars="vertical"
-        android:text="@string/terminos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="34dp"
-        android:layout_marginLeft="27dp" />
 
     <Button
         android:id="@+id/atras"
         android:layout_width="102dp"
         android:layout_height="41dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginStart="241dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
         android:onClick="atras"
         android:text="Atrás"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:layout_marginRight="41dp"
-        android:layout_marginLeft="241dp" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="381dp"
+        android:layout_height="420dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="323dp"
+                android:layout_height="431dp"
+
+                android:layout_marginEnd="34dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="34dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="16dp"
+                android:scrollbars="vertical"
+                android:text="@string/terminos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+           />
+
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

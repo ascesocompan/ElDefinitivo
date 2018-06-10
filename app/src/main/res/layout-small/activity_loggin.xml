@@ -76,4 +76,12 @@
         android:text="Introduzca su contraseña"
         android:visibility="invisible" />
 
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Contraseña"
+        android:layout_centerHorizontal="true"
+        android:text="Mantener sesion abierta"
+        android:visibility="invisible"/>
 </RelativeLayout>

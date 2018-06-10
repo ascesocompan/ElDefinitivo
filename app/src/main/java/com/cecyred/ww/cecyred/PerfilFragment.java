@@ -8,9 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-/**
- * Created by User on 18/04/2018.
- */
 
 public class PerfilFragment extends Fragment {
      private TextView txt_nom, txt_bol;
