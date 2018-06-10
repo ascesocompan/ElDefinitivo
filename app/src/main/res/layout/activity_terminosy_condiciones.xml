@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cecyred.ww.cecyred.TerminosyCondiciones">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="323dp"
+        android:layout_height="431dp"
+
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:scrollbars="vertical"
+        android:text="@string/terminos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="34dp"
+        android:layout_marginLeft="27dp" />
+
+    <Button
+        android:id="@+id/atras"
+        android:layout_width="102dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginStart="241dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/colorPrimary"
+        android:onClick="atras"
+        android:text="Atrás"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:layout_marginRight="41dp"
+        android:layout_marginLeft="241dp" />
+</android.support.constraint.ConstraintLayout>

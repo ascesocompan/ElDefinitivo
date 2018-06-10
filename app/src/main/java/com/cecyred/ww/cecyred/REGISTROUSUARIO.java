@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ import org.json.JSONObject;
 public class REGISTROUSUARIO extends AppCompatActivity {
 EditText Et_nom,Et_pass,Et_bol;
     private ProgressBar progresbar2;
+    CheckBox check1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,14 +26,21 @@ EditText Et_nom,Et_pass,Et_bol;
        Et_pass=(EditText)findViewById(R.id.TXT_CONTRA);
        Et_bol=(EditText)findViewById(R.id.TXT_BOLETA);
         progresbar2=(ProgressBar)findViewById(R.id.progressBar2);
+        check1=(CheckBox)findViewById(R.id.Terminos);
     }
     public void registro(View v) {
-        String usuario = Et_nom.getText().toString();
-        String contrasena = Et_pass.getText().toString();
+        String usuario = Et_nom.getText().toString().trim();
+        String contrasena = Et_pass.getText().toString().trim();
         String boleta = Et_bol.getText().toString();
         if (usuario.isEmpty() || contrasena.isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Ingresa el usuario y la contraseña", Toast.LENGTH_SHORT).show();
-        }else {
+            Toast.makeText(getApplicationContext(), "Ingresa el usuario y/o la contraseña", Toast.LENGTH_SHORT).show();
+
+        } else {
+            if (!check1.isChecked()) {
+                Toast.makeText(getApplicationContext(), "Debes aceptar los terminos y condiciones.", Toast.LENGTH_SHORT).show();
+            } else {
+
+
             progresbar2.setVisibility(View.VISIBLE);
             Response.Listener<String> respolistener = new Response.Listener<String>() {
 
@@ -39,7 +48,7 @@ EditText Et_nom,Et_pass,Et_bol;
                 public void onResponse(String response) {
 
                     // jsonResponse= null;
-                  //  comprobarusuario();
+                    //  comprobarusuario();
                     try {
                         JSONObject jsonResponse = new JSONObject(response);
                         boolean succes = jsonResponse.getBoolean("success");
@@ -62,6 +71,12 @@ EditText Et_nom,Et_pass,Et_bol;
             RequestQueue queue = Volley.newRequestQueue(REGISTROUSUARIO.this);
             queue.add(requestreg);
         }
+        }
+
+    }
+    public void terminos(View v){
+        Intent intent= new Intent (REGISTROUSUARIO.this, TerminosyCondiciones.class);
+        startActivity(intent);
     }
    /* public void comprobarusuario(){
         String usuario = Et_nom.getText().toString();
